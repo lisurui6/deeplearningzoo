@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="./css/animate.min.css"><link rel="stylesheet" href="./css/font-awesome.min.css"><link href='https://fonts.googleapis.com/css?family=PT+Serif+Caption&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    
+	<script src="./js/jquery-2.1.0.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/blocs.min.js"></script>
+	<script src="./js/jqBootstrapValidation.js"></script>
+	<script src="./js/formHandler.js"></script>
+    <title>Image Captioning</title>
+
+    
+<!-- Google Analytics -->
+ 
+<!-- Google Analytics END -->
+    
+</head>
+<body>
+<!-- Main container -->
+<div class="page-container">
+    
+<!-- bloc-0 -->
+<div class="bloc bgc-white l-bloc sticky-nav b-divider" id="bloc-0">
+	<div class="container">
+		<nav class="navbar row">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">Deep Learning Zoo</a>
+				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse navbar-1">
+				<ul class="site-navigation nav navbar-nav list-sp-md">
+					<li>
+						<a href="index.html" class="ltc-outer-space">Home</a>
+					</li>
+					<li>
+						<a href="about.html" class="ltc-outer-space">About</a>
+					</li>
+					<li>
+						<a href="projects.html" class="ltc-outer-space">Projects</a>
+					</li>
+					<li>
+						<a href="datasets.html" class="ltc-outer-space">Datasets</a>
+					</li>
+					<li>
+						<a href="pretrained-models.html" class="ltc-outer-space">Pretrained Models</a>
+					</li>
+					<li>
+					</li>
+					<li>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+<!-- bloc-0 END -->
+
+<!-- bloc-16 -->
+<div class="bloc bgc-white l-bloc" id="bloc-16">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1 class="text-center  mg-lg">
+					Image Captioning
+				</h1>
+				<p class="text-w-50 text-center ">
+					A quick glance at an image is sufficient for a human to point out and describe an immense amount of details about the visual scene. For computers, it is more complicated, since the image description needs to accurate about objects in the scene, and understand the context of the scene.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-16 END -->
+
+<!-- bloc-17 -->
+<div class="bloc bgc-white l-bloc" id="bloc-17">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="mg-md text-center">
+					Deep Visual-Semantic Alignments for Generating Image Descriptions
+				</h2>
+			</div>
+		</div>
+		<div class="row voffset">
+			<div class="col-sm-6">
+				<p>
+					In this paper, they combins a CNN with a bidirectional recurrent neural network to generate natural image description. Bidirectional means that the network examine the sentence in both direction to decide whether it make sense..
+				</p>
+				<p class=" mg-lg">
+					Currently, training method has not been updated yet, please stay tuned to check it out later. Now, why don't you send your image to the neural network to try it!
+				</p>
+				
+					<form action="/neuraltalk2" method="post" enctype="multipart/form-data" class="" id="form-2882">
+						Select an image: <input type="file" name="image" id="undefined-28547-2882" class="">
+					    <input type="submit" value="Submit" id="undefined-28547-2882" class="">
+					</form>
+					
+				<a href="http://cs.stanford.edu/people/karpathy/cvpr2015.pdf" class="a-btn a-block" target="_blank">Arxiv link</a><a href="https://github.com/karpathy/neuraltalk2" class="a-btn a-block" target="_blank">Github link</a>
+			</div>
+			<div class="col-sm-6">
+					<img src="img/image%20captioning.png" class="img-responsive" />
+				</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-17 END -->
+
+<!-- ScrollToTop Button -->
+<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>
+<!-- ScrollToTop Button END-->
+
+
+</div>
+<!-- Main container END -->
+    
+
+</body>
+</html>
