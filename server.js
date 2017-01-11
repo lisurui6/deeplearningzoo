@@ -114,11 +114,9 @@ app.post('/text2image', function(req, res) {
           console.log('Description upload successful');
       });
 
-      // && python generate_images.py --model_path=Data/Models/latest_model_flowers_temp.ckpt --n_images=1
-      // child = exec("/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 generate_images.py", {cwd:'./gan/text2image'}, function(error, stdout, stderr){
+     
         child = exec("python generate_thought_vectors.py && python generate_images.py", {cwd:'./projects/text-to-image'}, function(error, stdout, stderr){
         console.log('childProcess stdout:' + stdout);
-        // res.redirect("./gan/text2image/Data/sample_captions.txt");
 	fs.readFile('./projects/text-to-image/Data/val_samples/combined_image_0.jpg', function(err, data) {
                   if (err) throw err;
                   res.writeHead(200, {'Content-Type': 'text/html'});
@@ -126,7 +124,6 @@ app.post('/text2image', function(req, res) {
                   res.write(new Buffer(data).toString('base64'));
                   res.end('" class="img-responsive" />');
                });
-        // res.redirect("./projects/text-to-image/Data/val_samples/combined_image_0.jpg");
         child.on('exit', function(code){
         console.log('exit childProcess' + code);
         });
@@ -183,6 +180,8 @@ app.post('/neural_storyteller', function(req, res) {
             // write file to uploads/fullsize folder
             fs.writeFile(newPath, data, function (err) {
               // let's see it
+		    console.log('Upload image successful.');
+              });
                child = exec("python main.py -i "+imageName+" -> output.txt", {cwd:'./projects/neural_storyteller/neural-storyteller'},function(error, stdout, stderr){
                console.log('childProcess stdout:' + stdout);
                res.redirect("./projects/neural_storyteller/neural-storyteller/output.txt");
@@ -194,14 +193,6 @@ app.post('/neural_storyteller', function(req, res) {
         });
     });
 });
-
-// app.get('/uploads/fullsize/:file', function (req, res){
-//   file = req.params.file;
-//   var img = fs.readFileSync(__dirname + "/uploads/fullsize/" + file);
-//   res.writeHead(200, {'Content-Type': 'image/jpg' });
-//   res.end(img, 'binary');
-// });
-
 
 var server = app.listen(8080, function () {
    var host = server.address().address
