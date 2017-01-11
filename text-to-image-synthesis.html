@@ -102,12 +102,42 @@
 					Currently, training method has not been updated yet, please stay tuned to check it out later. Now, why don't you send a description of a flower to the neural network to try it! Example inputs and outputs are shown in the right.
 				</p>
 				
-					<form action="/text2image" method="post" class="">
-	Select a flower description: <input type="text" name="description">
-    <input type="submit" value="Submit">
-</form>
+					<form action="/text2image" method="post" class="" onsubmit="AJAXSubmit(this); return false;">
+						Select a flower description: <input type="text" name="description">
+					    <input type="submit" value="Submit">
+					</form>
 					
-				<img src="img/img_holder.png" class="img-responsive img-frame-lg" /><a href="https://arxiv.org/abs/1605.05396" class="a-btn a-block" target="_blank">Arxiv link</a><a href="https://github.com/paarthneekhara/text-to-image" class="a-btn a-block" target="_blank">Github link</a>
+				<div id="123">
+                                <img src="img/img_holder.png" class="img-responsive img-frame-lg" />
+                                </div>
+                                <script>
+                                "use strict";
+
+                                        function ajaxSuccess () {
+                                          console.log(this.responseText);
+                                        }
+
+                                        function AJAXSubmit (oFormElement) {
+                                                if (!oFormElement.action) { return; }
+
+                                                var oReq = new XMLHttpRequest();
+                                                oReq.onload = ajaxSuccess;
+                                                oReq.onreadystatechange = 
+                                                function()
+                                                {
+                                                        if (oReq.readyState == 4 && oReq.status == 200)
+                                                        {
+                                                                document.getElementById('123').innerHTML = oReq.responseText;
+                                                        } else
+                                                        {
+                                                                document.getElementById('123').innerHTML = '<img src="img/waiting_img.png" class="img-responsive img-frame-lg" />';
+                                                        }
+                                                }
+                                                oReq.open("post", oFormElement.action);
+                                                oReq.send(new FormData(oFormElement));
+                                        }
+                                </script>
+				<a href="https://arxiv.org/abs/1605.05396" class="a-btn a-block" target="_blank">Arxiv link</a><a href="https://github.com/paarthneekhara/text-to-image" class="a-btn a-block" target="_blank">Github link</a>
 			</div>
 			<div class="col-sm-6">
 					<img src="img/text2image2.png" class="img-responsive" />
