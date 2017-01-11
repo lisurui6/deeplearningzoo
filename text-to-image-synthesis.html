@@ -29,7 +29,7 @@
 <div class="page-container">
     
 <!-- bloc-0 -->
-<div class="bloc bgc-white l-bloc sticky-nav b-divider" id="bloc-0">
+<div class="bloc sticky-nav b-divider bgc-white l-bloc" id="bloc-0">
 	<div class="container">
 		<nav class="navbar row">
 			<div class="navbar-header">
@@ -38,22 +38,22 @@
 					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
 			</div>
-			<div class="collapse navbar-collapse navbar-1">
+			<div class="navbar-collapse navbar-1 collapse">
 				<ul class="site-navigation nav navbar-nav list-sp-md">
 					<li>
-						<a href="index.html" class="ltc-outer-space">Home</a>
+						<a href="index.html">Home</a>
 					</li>
 					<li>
-						<a href="about.html" class="ltc-outer-space">About</a>
+						<a href="about.html">About</a>
 					</li>
 					<li>
-						<a href="projects.html" class="ltc-outer-space">Projects</a>
+						<a href="demo.html">Demo</a>
 					</li>
 					<li>
-						<a href="datasets.html" class="ltc-outer-space">Datasets</a>
+						<a href="train-your-own.html">Train Your Own</a>
 					</li>
 					<li>
-						<a href="pretrained-models.html" class="ltc-outer-space">Pretrained Models</a>
+						<a href="datasets-&amp;-pretrained-models.html">Datasets &amp; Pretrained Models</a>
 					</li>
 					<li>
 					</li>
@@ -66,8 +66,8 @@
 </div>
 <!-- bloc-0 END -->
 
-<!-- bloc-20 -->
-<div class="bloc bgc-white l-bloc" id="bloc-20">
+<!-- bloc-19 -->
+<div class="bloc bgc-white l-bloc" id="bloc-19">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-12">
@@ -81,10 +81,10 @@
 		</div>
 	</div>
 </div>
-<!-- bloc-20 END -->
+<!-- bloc-19 END -->
 
-<!-- bloc-21 -->
-<div class="bloc bgc-white l-bloc" id="bloc-21">
+<!-- bloc-20 -->
+<div class="bloc bgc-white l-bloc" id="bloc-20">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-12">
@@ -102,41 +102,12 @@
 					Currently, training method has not been updated yet, please stay tuned to check it out later. Now, why don't you send a description of a flower to the neural network to try it! Example inputs and outputs are shown in the right.
 				</p>
 				
-					<form action="/text2image" method="post" class="" onsubmit="AJAXSubmit(this); return false;">
-						Select a flower description: <input type="text" name="description">
-					    <input type="submit" value="Submit">
-					</form>
-				<div id="123">	
-				<img src="img/img_holder.png" class="img-responsive img-frame-lg" />
-				</div>
-				<script>
-				"use strict";
-
-					function ajaxSuccess () {
-					  console.log(this.responseText);
-					}
-
-					function AJAXSubmit (oFormElement) {
-						if (!oFormElement.action) { return; }
-
-						var oReq = new XMLHttpRequest();
-						oReq.onload = ajaxSuccess;
-						oReq.onreadystatechange = 
-						function()
-						{
-							if (oReq.readyState == 4 && oReq.status == 200)
-							{
-								document.getElementById('123').innerHTML = oReq.responseText;
-							} else
-							{
-								document.getElementById('123').innerHTML = '<img src="img/waiting_img.png" class="img-responsive img-frame-lg" />';
-							}
-						}
-						oReq.open("post", oFormElement.action);
-						oReq.send(new FormData(oFormElement));
-					}
-				</script>
-				<a href="https://arxiv.org/abs/1605.05396" class="a-btn a-block" target="_blank">Arxiv link</a><a href="https://github.com/paarthneekhara/text-to-image" class="a-btn a-block" target="_blank">Github link</a>
+					<form action="/text2image" method="post" class="">
+	Select a flower description: <input type="text" name="description">
+    <input type="submit" value="Submit">
+</form>
+					
+				<img src="img/img_holder.png" class="img-responsive img-frame-lg" /><a href="https://arxiv.org/abs/1605.05396" class="a-btn a-block" target="_blank">Arxiv link</a><a href="https://github.com/paarthneekhara/text-to-image" class="a-btn a-block" target="_blank">Github link</a>
 			</div>
 			<div class="col-sm-6">
 					<img src="img/text2image2.png" class="img-responsive" />
@@ -144,7 +115,7 @@
 		</div>
 	</div>
 </div>
-<!-- bloc-21 END -->
+<!-- bloc-20 END -->
 
 <!-- ScrollToTop Button -->
 <a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>

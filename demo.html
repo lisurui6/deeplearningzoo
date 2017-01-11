@@ -14,9 +14,7 @@
 	<script src="./js/jquery-2.1.0.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/blocs.min.js"></script>
-	<script src="./js/jqBootstrapValidation.js"></script>
-	<script src="./js/formHandler.js"></script>
-    <title>Automated Colorization</title>
+    <title>Demo</title>
 
     
 <!-- Google Analytics -->
@@ -66,56 +64,95 @@
 </div>
 <!-- bloc-0 END -->
 
-<!-- bloc-11 -->
-<div class="bloc bgc-white l-bloc" id="bloc-11">
+<!-- bloc-5 -->
+<div class="bloc bgc-white l-bloc" id="bloc-5">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-12">
-				<h1 class="text-center  mg-lg">
-					Automated Colorization
-				</h1>
-				<p class="text-w-50 text-center ">
-					Give you a black-and-white picture, can you color it? For some objects such as sky and glass, it's easy to guess what their colors should be. For other objects, like cars and shirts, it's entirely upto your imagination to fill in the possible colors. This task can not only demonstrate neural networks' ability of visual understanding but also the ability of imagination.
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-11 END -->
-
-<!-- bloc-12 -->
-<div class="bloc bgc-white l-bloc" id="bloc-12">
-	<div class="container bloc-lg">
-		<div class="row">
-			<div class="col-sm-12">
-				<h2 class="mg-md text-center">
-					Learning Representations for Automatic Colorization
+				<h2 class="mg-md text-center ">
+					Convolutional Neural Networks
 				</h2>
 			</div>
 		</div>
 		<div class="row voffset">
 			<div class="col-sm-6">
-				<p>
-					A deep neural architecture (VGG) used for image classification is altered to an end-to-end system for this task. Instead of outputing image labels, the end-to-end system is trained to output predicted hue and chroma distribution.
-				</p>
-				<p class=" mg-lg">
-					Currently, training method has not been updated yet, please stay tuned to check it out later. Now, why don't you send your image to the neural network to try it!
-				</p>
-				
-					<form action="/bw2color" method="post" enctype="multipart/form-data" class="">
-	Select an image: <input type="file" name="image">
-    <input type="submit" value="Submit">
-</form>
-					
-				<img src="img/img_holder.png" class="img-responsive img-frame-lg" /><a href="https://arxiv.org/abs/1603.06668" class="a-btn a-block" target="_blank">Arxiv link</a> <a href="https://github.com/richzhang/colorization" class="a-btn a-block" target="_blank">Github link</a>
+				<ul class="list-unstyled">
+					<li>
+						<a href="image-recognition.html" class="btn btn-lg btn-block btn-glossy btn-outer-space">Image Recognition</a>
+					</li>
+					<li>
+						<a href="automated-colorization.html" class="btn btn-lg btn-block btn-glossy btn-outer-space">Automated Colorization</a>
+					</li>
+				</ul>
 			</div>
 			<div class="col-sm-6">
-					<img src="img/colorization.png" class="img-responsive" />
-				</div>
+				<p>
+					Convolutional neural networks (CNN) is mostly used for images, as its connectivity pattens are inspire by human visual cortex. Recent years, CNN has been proven to be most effective to recognise objects in images, even surpass human accuracy. Here we choose 2 applications for CNN at the moment to illustrate the magic of CNN.
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
-<!-- bloc-12 END -->
+<!-- bloc-5 END -->
+
+<!-- bloc-6 -->
+<div class="bloc bgc-white l-bloc" id="bloc-6">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="mg-md text-center ">
+					Recurrent Neural Networks
+				</h2>
+			</div>
+		</div>
+		<div class="row voffset">
+			<div class="col-sm-6">
+				<ul class="list-unstyled">
+					<li>
+						<a href="image-captioning.html" class="btn btn-lg btn-block btn-glossy btn-outer-space">Image Captioning</a>
+					</li>
+					<li>
+						<a href="neural-storyteller.html" class="btn btn-lg btn-block btn-glossy btn-outer-space">Neural Storyteller</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<p>
+					Recurrent neural networks (RNN) is great for analysing time series data (sentence, videos, audio, etc.), as its inputs and outputs are usually dynamic.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-6 END -->
+
+<!-- bloc-7 -->
+<div class="bloc bgc-white l-bloc" id="bloc-7">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 class="mg-md text-center ">
+					Generative Adversarial Networks
+				</h2>
+			</div>
+		</div>
+		<div class="row voffset">
+			<div class="col-sm-6">
+				<ul class="list-unstyled">
+					<li>
+						<a href="text-to-image-synthesis.html" class="btn btn-lg btn-block btn-glossy btn-outer-space">Text to Image Synthesis</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<p>
+					Generative adversarial networks (GAN) is a methodology of using two neural networks competing against, with one acting as a classifier to determine whether the output of the other network looks real. GAN is currently the most exciting area of deep learning, showing great promises of its capability of generating realistic images.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-7 END -->
 
 <!-- ScrollToTop Button -->
 <a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>

@@ -180,59 +180,65 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 #bloc-8 h2{
 	font-size: 50px;
 }
-#bloc-9 h2{
+#bloc-8 p{
+	font-size: 20.000000953674316px;
+}
+#bloc-9 h1{
 	font-size: 50px;
 }
-#bloc-10 h1{
-	font-size: 50px;
+#bloc-9 p{
+	font-size: 20.000000953674316px;
 }
 #bloc-10 p{
 	font-size: 20.000000953674316px;
 }
+#bloc-11 h1{
+	font-size: 50px;
+}
 #bloc-11 p{
 	font-size: 20.000000953674316px;
-}
-#bloc-12 h1{
-	font-size: 50px;
 }
 #bloc-12 p{
 	font-size: 20.000000953674316px;
 }
-#bloc-13 p{
+#bloc-13 h1{
+	font-size: 50px;
+}
+#bloc-15 h1{
+	font-size: 50px;
+}
+#bloc-15 p{
 	font-size: 20.000000953674316px;
-}
-#bloc-14 h1{
-	font-size: 50px;
-}
-#bloc-16 h1{
-	font-size: 50px;
 }
 #bloc-16 p{
 	font-size: 20.000000953674316px;
 }
+#bloc-17 h1{
+	font-size: 50px;
+}
 #bloc-17 p{
 	font-size: 20.000000953674316px;
-}
-#bloc-18 h1{
-	font-size: 50px;
 }
 #bloc-18 p{
 	font-size: 20.000000953674316px;
 }
+#bloc-19 h1{
+	font-size: 50px;
+}
 #bloc-19 p{
 	font-size: 20.000000953674316px;
-}
-#bloc-20 h1{
-	font-size: 50px;
 }
 #bloc-20 p{
 	font-size: 20.000000953674316px;
 }
-#bloc-21 p{
-	font-size: 20.000000953674316px;
-}
-#bloc-22 h1{
+#bloc-21 h1{
 	font-size: 50px;
+}
+#bloc-23 h3{
+	font-size: 50px;
+}
+#bloc-23 p{
+	font-size: 20.000000953674316px;
 }
 
 /* = NavBar
@@ -605,15 +611,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .btn-outer-space:hover{
 	background-color:#3b393e;
-	!important}/* Link colour styles */
-
-.ltc-outer-space{
-	color:#47454B!important;
-}
-.ltc-outer-space:hover{
-	color:#3b393e!important;
-}
-
+	!important}
 /* Bloc image backgrounds */
 
 
