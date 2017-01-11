@@ -102,11 +102,39 @@
 					Currently, training method has not been updated yet, please stay tuned to check it out later. Now, why don't you send your image to the neural network to try it!
 				</p>
 				
-					<form action="/neural_storyteller" method="post" enctype="multipart/form-data" class="" id="form-39557">
-	Select an image: <input type="file" name="image" id="undefined-28547-39557">
-    <input type="submit" value="Submit" id="undefined-28547-39557">
-</form>
-					
+					<form action="/neural_storyteller" method="post" enctype="multipart/form-data" class="" id="form-39557" onsubmit="AJAXSubmit(this); return false;">
+						Select an image: <input type="file" name="image" id="undefined-28547" class="">
+						Select an image: <input type="file" name="image" id="undefined-28547-39557">
+					    <input type="submit" value="Submit" id="undefined-28547-39557">
+					</form>
+					<div id="123">
+					<img src="img/img_holder.png" class="img-responsive img-frame-lg" />
+					</div>
+                                <script>
+                                "use strict";
+                                        function ajaxSuccess () {
+                                          console.log(this.responseText);
+                                        }
+                                        function AJAXSubmit (oFormElement) {
+                                                if (!oFormElement.action) { return; }
+                                                var oReq = new XMLHttpRequest();
+                                                oReq.onload = ajaxSuccess;
+                                                oReq.onreadystatechange = 
+                                                function()
+                                                {
+                                                        if (oReq.readyState == 4 && oReq.status == 200)
+                                                        {
+                                                                document.getElementById('123').innerHTML = oReq.responseText;
+                                                        } else
+                                                        {
+                                                                document.getElementById('123').inner
+HTML = '<img src="img/waiting_img.png" class="img-responsive img-frame-lg" />';
+                                                        }
+                                                }
+                                                oReq.open("post", oFormElement.action);
+                                                oReq.send(new FormData(oFormElement));
+                                        }
+                                </script>
 				<a href="https://github.com/ryankiros/neural-storyteller" class="a-btn a-block" target="_blank">Github link</a>
 			</div>
 			<div class="col-sm-6">
